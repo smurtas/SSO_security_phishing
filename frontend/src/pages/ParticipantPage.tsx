@@ -7,7 +7,9 @@ import {
 import { ProgressSteps } from "../components/ProgressSteps";
 
 const initialForm: ParticipantFormData = {
+  participantCode: "",
   age: 18,
+  sex: "male",
   school: "buonarroti",
   studyProgram: "",
   ssoUsage: 3,
@@ -84,6 +86,30 @@ export function ParticipantPage() {
 
       <form onSubmit={handleSubmit}>
         <div className="form-grid">
+          <label className="form-grid__wide">
+            Codice partecipante
+            <input
+              type="text"
+              value={form.participantCode}
+              onChange={(event) =>
+                updateField(
+                  "participantCode",
+                  event.target.value
+                    .toUpperCase()
+                    .replace(/[^A-Z0-9]/g, "")
+                )
+              }
+              placeholder="Esempio: A7K4P9"
+              maxLength={6}
+              autoComplete="off"
+              required
+            />
+
+            <small>
+              Inserisci il codice casuale che ti è stato assegnato.
+              Il codice serve a collegare le diverse fasi dello studio.
+            </small>
+          </label>
           <label>
             Età
             <input
@@ -98,6 +124,21 @@ export function ParticipantPage() {
                 )
               }
             />
+          </label>
+          <label>
+            Sesso
+            <select
+              value={form.sex}
+              onChange={(event) =>
+                updateField(
+                  "sex",
+                  event.target.value as ParticipantFormData["sex"],
+                )
+              }
+            >
+              <option value="male">Maschile</option>
+              <option value="female">Femminile</option>
+            </select>
           </label>
 
           <label>

@@ -2,6 +2,15 @@ import { Link, Navigate } from "react-router";
 import { ProgressSteps } from "../components/ProgressSteps";
 
 export function InstructionPage() {
+
+  function handleStartExperiment() {
+    sessionStorage.removeItem("pilotScenarioResponses");
+    sessionStorage.removeItem("pilotScenarioOrder");
+    sessionStorage.removeItem("pilotScenarioCurrentIndex");
+    sessionStorage.removeItem("completedFlowScenarioId");
+  }
+
+  
   const profile =
     sessionStorage.getItem("participantProfile");
 
@@ -63,7 +72,7 @@ export function InstructionPage() {
         sono simulati. Non inserire dati reali.
       </div>
 
-    <Link className="primary-button" to="/google-login">
+    <Link className="primary-button" to="/google-login" onClick={handleStartExperiment}>
       Entra
     </Link>
     </section>

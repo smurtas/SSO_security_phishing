@@ -1,6 +1,15 @@
 import * as z from "zod";
 
 export const participantSchema = z.object({
+  participantCode: z
+  .string()
+  .trim()
+  .regex(
+    /^[A-Z0-9]{6}$/,
+    "Il codice partecipante deve contenere 6 caratteri alfanumerici.",
+  ),
+
+sex: z.enum(["male", "female"]),
   age: z
     .number()
     .int()
