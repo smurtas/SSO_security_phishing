@@ -709,3 +709,39 @@
   background: #ffffff;
   cursor: default;
 }
+
+/* checkbox for consent */
+.card .checkbox-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+  width: 100%;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.card .checkbox-row > input[type="checkbox"] {
+  position: static !important;
+  display: block;
+  flex: 0 0 auto;
+
+  width: 18px;
+  height: 18px;
+
+  margin: 4px 0 0 0 !important;
+}
+
+.card .checkbox-row > span {
+  display: block;
+  flex: 0 1 auto !important;
+
+  width: auto !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  text-align: left;
+}

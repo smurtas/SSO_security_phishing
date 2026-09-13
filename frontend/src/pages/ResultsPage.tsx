@@ -51,7 +51,7 @@ export function ResultsPage() {
 
   function restartPilot() {
     sessionStorage.removeItem(STORAGE_KEY);
-    navigate("/instructions");
+    navigate("/");
   }
 
   return (
@@ -134,7 +134,7 @@ export function ResultsPage() {
         className="secondary-button"
         onClick={restartPilot}
       >
-        Ripeti il test pilota
+        Ripeti il test 
       </button>
     </section>
   );

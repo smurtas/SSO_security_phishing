@@ -27,7 +27,7 @@ export function ScenarioVisual({
       return (
         <BrowserMockup
           domain="accounts-google-auth.com"
-          secure
+          secure={false}
           provider="google"
         />
       );

@@ -35,7 +35,7 @@ export function BrowserMockup({
 
         <div className="browser-address">
           <span aria-label={secure ? "Connessione HTTPS" : "Connessione HTTP"}>
-            {secure ? "🔒" : "⚠️"}
+            {secure ? "🔒" : "🔓"}
           </span>
 
           <span>{secure ? "https://" : "http://"}</span>
@@ -58,7 +58,7 @@ export function BrowserMockup({
 
         <h2>Accedi con {providerName}</h2>
 
-        <p>Utilizza il tuo account per continuare su Student Hub.</p>
+        <p>Utilizza il tuo account per continuare su Google Classroom.</p>
 
         <div className="simulated-input">
           nome.cognome@scuola.it

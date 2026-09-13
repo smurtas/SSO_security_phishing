@@ -262,7 +262,7 @@ export const pilotScenarios: Scenario[] = [
     protocol: "OIDC",
     title: "Redirect Microsoft corretto",
     instruction:
-      "Segui il flusso di autenticazione tra Student Hub e Microsoft e valuta i domini attraversati.",
+      "Segui il flusso di autenticazione tra Microsoft Teams e Microsoft e valuta i domini attraversati.",
     expectedAnswer: "legitimate",
     difficultyLevel: 2,
     type: "full-flow",
