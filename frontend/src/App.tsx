@@ -9,6 +9,8 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { ParticipantPage } from "./pages/ParticipantPage";
 import { ResultsPage } from "./pages/ResultsPage";
 import { GoogleLoginPage } from "./pages/GoogleLoginPage";
+import { MicrosoftLoginPage } from "./pages/MicrosoftLoginPage";
+import { TeamsPage } from "./pages/TeamsPage";
 import "./App.css";
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path="/experiment" element={<ExperimentPage />} />
         <Route path="/results" element={<ResultsPage />} />
         <Route path="/google-login" element={<GoogleLoginPage />} />
+        <Route path="/microsoft-login" element={<MicrosoftLoginPage />} />
+        <Route path="/teams" element={<TeamsPage />} />
         <Route path="*" element={<NotFoundPage />} />
 
       </Routes>

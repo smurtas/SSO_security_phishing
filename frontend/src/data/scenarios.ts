@@ -86,11 +86,13 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
+  */
+  
   {
     id: "UC07",
     category: "fake_idp",
     protocol: "OIDC",
-    title: "Falso accesso Microsoft",
+    title: "Accesso Microsoft Teams",
     instruction:
       'Accedi alla piattaforma scolastica tramite il pulsante "Accedi con Microsoft".',
     expectedAnswer: "malicious",
@@ -98,7 +100,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  */
+  
   {
     id: "UC08",
     category: "fake_idp",

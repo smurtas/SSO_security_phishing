@@ -745,3 +745,798 @@
 
   text-align: left;
 }
+
+//* =========================================================
+   MICROSOFT LOGIN FLOW
+   ========================================================= */
+
+.ms-page {
+  width: 100%;
+}
+
+.ms-study-warning {
+  max-width: 1150px;
+  margin: 0 auto 14px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #fff7d6;
+  border-left: 3px solid #e5b700;
+}
+
+.ms-browser {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  border: 1px solid #d7d7d7;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ms-browser-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.ms-browser-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.ms-browser-controls span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #9da3aa;
+}
+
+.ms-browser-address {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 18px;
+
+  background: #ffffff;
+  border-radius: 22px;
+
+  font-size: 16px;
+}
+
+.ms-auth-background {
+  min-height: 680px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(203, 216, 255, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 219, 203, 0.3),
+      transparent 40%
+    ),
+    #f5f4f7;
+}
+
+.ms-auth-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+.ms-auth-card {
+  background: #ffffff;
+  padding: 44px 44px 40px;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.ms-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+}
+
+.ms-logo-symbol {
+  display: grid;
+  grid-template-columns: 11px 11px;
+  grid-template-rows: 11px 11px;
+  gap: 2px;
+}
+
+.ms-logo-symbol span {
+  display: block;
+  width: 11px;
+  height: 11px;
+}
+
+.ms-logo-red {
+  background: #f25022;
+}
+
+.ms-logo-green {
+  background: #7fba00;
+}
+
+.ms-logo-blue {
+  background: #00a4ef;
+}
+
+.ms-logo-yellow {
+  background: #ffb900;
+}
+
+.ms-logo-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #737373;
+}
+
+.ms-title {
+  margin: 0 0 30px;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+.ms-input {
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 8px 0;
+
+  border: none;
+  border-bottom: 1px solid #666666;
+  border-radius: 0;
+
+  background: transparent;
+
+  font-size: 17px;
+
+  outline: none;
+}
+
+.ms-input:focus {
+  border-bottom: 2px solid #0067b8;
+}
+
+.ms-text {
+  margin: 26px 0 20px;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ms-link {
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  color: #0067b8;
+
+  font: inherit;
+
+  cursor: pointer;
+}
+
+.ms-link:hover {
+  text-decoration: underline;
+}
+
+.ms-help-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.ms-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+
+  margin-top: 32px;
+}
+
+.ms-button {
+  min-width: 108px;
+
+  padding: 9px 20px;
+
+  border: 0;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.ms-button-primary {
+  background: #0067b8;
+  color: white;
+}
+
+.ms-button-primary:hover {
+  background: #005da6;
+}
+
+.ms-button-secondary {
+  background: #cccccc;
+  color: #111111;
+}
+
+.ms-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 100%;
+
+  margin: 0 0 22px;
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.ms-access-options {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 22px;
+  padding: 18px 30px;
+
+  border: none;
+
+  background: white;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.15);
+
+  font-size: 18px;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.ms-key-icon {
+  font-size: 28px;
+}
+
+.ms-transition {
+  min-height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  font-size: 17px;
+  color: #444;
+}
+
+.ms-spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 4px solid #d8d8d8;
+  border-top-color: #0067b8;
+  border-radius: 50%;
+
+  animation: ms-spin 0.8s linear infinite;
+}
+
+@keyframes ms-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   MICROSOFT TEAMS - EDUCATION
+   ========================================================= */
+
+.teams-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #242424;
+}
+
+.teams-topbar {
+  width: 115.5%;
+  max-width: none;
+  box-sizing: border-box;
+
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: #464775;
+  color: #ffffff;
+}
+
+.teams-app-launcher {
+  width: 44px;
+
+  font-size: 22px;
+  letter-spacing: -5px;
+
+  cursor: default;
+}
+
+.teams-brand {
+  min-width: 190px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.teams-search {
+  flex: 1;
+
+  max-width: 520px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 auto;
+  padding: 0 14px;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+  color: #666666;
+
+  font-size: 14px;
+}
+
+.teams-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.teams-user-email {
+  font-size: 13px;
+}
+
+.teams-user-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #6264a7;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.teams-layout {
+  display: flex;
+  min-height: calc(100vh - 56px);
+}
+
+/* Sidebar */
+
+.teams-sidebar {
+  width: 92px;
+  flex-shrink: 0;
+
+  background: #ebebeb;
+  border-right: 1px solid #dadada;
+}
+
+.teams-sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.teams-nav-item {
+  min-height: 72px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border: none;
+  border-left: 3px solid transparent;
+
+  background: transparent;
+
+  color: #616161;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.teams-nav-item:hover {
+  background: #dddddd;
+}
+
+.teams-nav-item--active {
+  background: #ffffff;
+  border-left-color: #6264a7;
+
+  color: #464775;
+  font-weight: 600;
+}
+
+.teams-nav-icon {
+  font-size: 23px;
+  line-height: 1;
+}
+
+/* Main area */
+
+.teams-content {
+  flex: 1;
+
+  padding: 38px 48px 60px;
+
+  background: #ffffff;
+}
+
+.teams-content-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.teams-content-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.teams-content-header p {
+  margin: 7px 0 0;
+
+  color: #616161;
+  font-size: 14px;
+}
+
+.teams-join-button {
+  padding: 9px 16px;
+
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+
+  background: #ffffff;
+  color: #242424;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.teams-join-button:hover {
+  background: #f2f2f2;
+}
+
+/* Tabs */
+
+.teams-tabs {
+  display: flex;
+  gap: 28px;
+
+  margin-top: 34px;
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.teams-tab {
+  position: relative;
+
+  padding: 0 2px 13px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #616161;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.teams-tab--active {
+  color: #464775;
+  font-weight: 600;
+}
+
+.teams-tab--active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 3px;
+
+  background: #6264a7;
+}
+
+/* Course cards */
+
+.teams-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(260px, 1fr));
+
+  gap: 24px;
+
+  max-width: 1100px;
+}
+
+.teams-class-card {
+  min-height: 170px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.teams-class-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.teams-class-header {
+  height: 74px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 18px;
+
+  background: #6264a7;
+}
+
+.teams-class-avatar {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #464775;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.teams-class-menu {
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.teams-class-body {
+  padding: 17px 18px 20px;
+}
+
+.teams-class-body h2 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.teams-class-body p {
+  margin: 0;
+
+  color: #616161;
+
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .teams-user-email {
+    display: none;
+  }
+
+  .teams-search {
+    max-width: 280px;
+  }
+
+  .teams-content {
+    padding: 28px 24px;
+  }
+
+  .teams-content-header {
+    flex-direction: column;
+  }
+}
+.teams-experiment-continue {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1100px;
+  margin-top: 36px;
+}
+
+/* =========================================================
+   TEAMS LOGIN HERO - UC07
+   ========================================================= */
+
+.teams-login-hero {
+  width: 100%;
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 70px 72px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.teams-login-hero-content {
+  width: 46%;
+  max-width: 650px;
+}
+
+.teams-login-hero-content h2 {
+  margin: 0 0 32px;
+
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 400;
+
+  color: #111827;
+}
+
+.teams-login-hero-content p {
+  max-width: 620px;
+
+  margin: 0 0 36px;
+
+  font-size: 19px;
+  line-height: 1.6;
+
+  color: #202124;
+}
+
+.teams-login-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.teams-login-access-button {
+  min-width: 104px;
+
+  padding: 14px 24px;
+
+  border: 2px solid #5b5fc7;
+  border-radius: 4px;
+
+  background: #5b5fc7;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.teams-login-access-button:hover {
+  background: #4f52b2;
+}
+
+.teams-login-download-button {
+  padding: 14px 24px;
+
+  border: 2px solid #464775;
+  border-radius: 4px;
+
+  background: transparent;
+  color: #33336d;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .teams-login-hero {
+    min-height: 520px;
+
+    padding: 50px 36px;
+
+    background-position: 60% center;
+  }
+
+  .teams-login-hero-content {
+    width: 58%;
+  }
+
+  .teams-login-hero-content h2 {
+    font-size: 46px;
+  }
+}
