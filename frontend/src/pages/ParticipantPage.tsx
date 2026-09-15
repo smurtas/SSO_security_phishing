@@ -99,8 +99,8 @@ export function ParticipantPage() {
                     .replace(/[^A-Z0-9]/g, "")
                 )
               }
-              placeholder="Esempio: A7K4P9"
-              maxLength={6}
+              placeholder="Esempio: A7K4P9RX2M"
+              maxLength={10}
               autoComplete="off"
               required
             />

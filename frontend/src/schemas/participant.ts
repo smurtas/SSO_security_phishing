@@ -2,19 +2,21 @@ import * as z from "zod";
 
 export const participantSchema = z.object({
   participantCode: z
-  .string()
-  .trim()
-  .regex(
-    /^[A-Z0-9]{6}$/,
-    "Il codice partecipante deve contenere 6 caratteri alfanumerici.",
-  ),
+    .string()
+    .trim()
+    .regex(
+      /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{10}$/,
+      "Il codice partecipante deve contenere 10 caratteri alfanumerici.",
+    ),
 
-sex: z.enum(["male", "female"]),
+  
   age: z
     .number()
     .int()
     .min(18, "È necessario avere almeno 18 anni.")
     .max(25, "Inserisci un'età valida."),
+
+  sex: z.enum(["male", "female"]),  
 
   school: z.enum([
     "buonarroti",

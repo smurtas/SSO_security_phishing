@@ -25,3 +25,10 @@ dist-ssr
 
 
 public/data/fine-tuning-ita.csv
+
+# local data 
+local_private/
+.env
+dump PostgreSQL
+file con i codici
+dati sperimentali
