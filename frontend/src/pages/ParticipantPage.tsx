@@ -5,6 +5,7 @@ import {
   type ParticipantFormData,
 } from "../schemas/participant";
 import { ProgressSteps } from "../components/ProgressSteps";
+import { supabase } from "../lib/supabase";
 
 const initialForm: ParticipantFormData = {
   participantCode: "",
@@ -23,6 +24,7 @@ export function ParticipantPage() {
   const [form, setForm] =
     useState<ParticipantFormData>(initialForm);
   const [errors, setErrors] = useState<string[]>([]);
+  const [isValidatingCode, setIsValidatingCode] = useState(false);
 
   const hasConsent =
     sessionStorage.getItem("studyConsent") === "accepted";
@@ -41,25 +43,95 @@ export function ParticipantPage() {
     }));
   }
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(
+    event: React.FormEvent,
+  ) {
     event.preventDefault();
 
-    const result = participantSchema.safeParse(form);
+    const result =
+      participantSchema.safeParse(form);
 
     if (!result.success) {
       setErrors(
-        result.error.issues.map((issue) => issue.message),
+        result.error.issues.map(
+          (issue) => issue.message,
+        ),
       );
       return;
     }
 
-    sessionStorage.setItem(
-      "participantProfile",
-      JSON.stringify(result.data),
-    );
-
+    setIsValidatingCode(true);
     setErrors([]);
-    navigate("/instructions");
+
+    try {
+      const { data, error } =
+        await supabase.functions.invoke(
+          "validate-participant-code",
+          {
+            body: {
+              code: result.data.participantCode,
+            },
+          },
+        );
+
+      if (error) {
+        console.error(
+          "Code validation error:",
+          error,
+        );
+
+        setErrors([
+          "Non è stato possibile verificare il codice. Riprova.",
+        ]);
+
+        return;
+      }
+
+      if (
+        !data?.valid ||
+        typeof data.studyId !== "string"
+      ) {
+        setErrors([
+          "Il codice partecipante non è valido.",
+        ]);
+
+        return;
+      }
+
+      /*
+       * Rimuoviamo il codice originale dai dati
+       * conservati nel browser.
+       */
+      const {
+        participantCode: _participantCode,
+        ...participantData
+      } = result.data;
+
+      sessionStorage.setItem(
+        "studyId",
+        data.studyId,
+      );
+
+      sessionStorage.setItem(
+        "participantProfile",
+        JSON.stringify(participantData),
+      );
+
+      navigate("/instructions");
+
+    } catch (error) {
+      console.error(
+        "Unexpected validation error:",
+        error,
+      );
+
+      setErrors([
+        "Si è verificato un errore durante la verifica del codice.",
+      ]);
+
+    } finally {
+      setIsValidatingCode(false);
+    }
   }
 
   return (
@@ -255,8 +327,14 @@ export function ParticipantPage() {
             Indietro
           </Link>
 
-          <button className="primary-button" type="submit">
-            Continua
+          <button
+            className="primary-button"
+            type="submit"
+            disabled={isValidatingCode}
+          >
+            {isValidatingCode
+              ? "Verifica codice..."
+              : "Continua"}
           </button>
         </div>
       </form>
